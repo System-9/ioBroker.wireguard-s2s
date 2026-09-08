@@ -2,8 +2,13 @@
 
 const test = require("node:test");
 const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
 const {
     buildWireGuardConfig,
+    createTemporaryConfig,
+    removeTemporaryConfig,
     validateApplyConfig,
     validateEndpoint,
     validateInterfaceName,
@@ -37,6 +42,18 @@ test("helper accepts the structured request and emits a WireGuard configuration"
     assert.match(output, /^\[Interface]/);
     assert.match(output, /AllowedIPs = 10\.200\.0\.2\/32, 192\.168\.2\.0\/24/);
     assert.match(output, /Endpoint = vpn\.example\.org:51820/);
+});
+
+test("helper protects and removes its temporary WireGuard configuration", () => {
+    const input = "[Interface]\nPrivateKey = secret\n";
+    const parent = fs.mkdtempSync(path.join(os.tmpdir(), "wireguard-helper-test-"));
+    const temporary = createTemporaryConfig(input, parent);
+    assert.equal(fs.readFileSync(temporary.file, "utf8"), input);
+    assert.equal(fs.statSync(temporary.directory).mode & 0o777, 0o700);
+    assert.equal(fs.statSync(temporary.file).mode & 0o777, 0o600);
+    removeTemporaryConfig(temporary);
+    assert.equal(fs.existsSync(temporary.directory), false);
+    fs.rmdirSync(parent);
 });
 
 test("helper interface names cannot escape the dedicated namespace", () => {

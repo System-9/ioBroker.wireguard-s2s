@@ -5,11 +5,10 @@ const fs = require("node:fs");
 const path = require("node:path");
 const net = require("node:net");
 const { execFile } = require("node:child_process");
-const { promisify } = require("node:util");
 
-const execFileAsync = promisify(execFile);
 const VERSION = "0.2.0";
 const STATE_DIRECTORY = "/var/lib/iobroker-wireguard-s2s";
+const WIREGUARD_CONFIG_DIRECTORY = "/etc/wireguard";
 const MANAGED_BY = "ioBroker.wireguard-s2s";
 const INTERFACE_PATTERN = /^iowg[0-9]{1,3}$/;
 const HOSTNAME_PATTERN = /^(?=.{1,253}$)(?!-)(?:[a-zA-Z0-9-]{1,63}\.)*[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$/;
@@ -55,11 +54,26 @@ function binary(name) {
 
 async function run(name, args, allowFailure = false) {
     try {
-        const result = await execFileAsync(binary(name), args, {
-            encoding: "utf8",
-            timeout: 10_000,
-            maxBuffer: 1_048_576,
-            env: { PATH: "/usr/sbin:/usr/bin:/sbin:/bin", LANG: "C", LC_ALL: "C" },
+        const result = await new Promise((resolve, reject) => {
+            execFile(
+                binary(name),
+                args,
+                {
+                    encoding: "utf8",
+                    timeout: 10_000,
+                    maxBuffer: 1_048_576,
+                    env: { PATH: "/usr/sbin:/usr/bin:/sbin:/bin", LANG: "C", LC_ALL: "C" },
+                },
+                (error, stdout, stderr) => {
+                    if (error) {
+                        error.stdout = stdout;
+                        error.stderr = stderr;
+                        reject(error);
+                    } else {
+                        resolve({ stdout, stderr });
+                    }
+                },
+            );
         });
         return { ok: true, stdout: String(result.stdout), stderr: String(result.stderr) };
     } catch (error) {
@@ -317,8 +331,16 @@ function buildWireGuardConfig(config) {
     return `${lines.join("\n")}\n`;
 }
 
-function createTemporaryConfig(contents) {
-    const directory = fs.mkdtempSync("/run/iobroker-wireguard-s2s-");
+function ensureWireGuardConfigDirectory() {
+    fs.mkdirSync(WIREGUARD_CONFIG_DIRECTORY, { recursive: true, mode: 0o700 });
+    const stat = fs.lstatSync(WIREGUARD_CONFIG_DIRECTORY);
+    if (!stat.isDirectory() || stat.isSymbolicLink() || stat.uid !== 0 || (stat.mode & 0o022) !== 0) {
+        throw new Error(`Unsafe WireGuard configuration directory: ${WIREGUARD_CONFIG_DIRECTORY}`);
+    }
+}
+
+function createTemporaryConfig(contents, parentDirectory = WIREGUARD_CONFIG_DIRECTORY) {
+    const directory = fs.mkdtempSync(path.join(parentDirectory, ".iobroker-wireguard-s2s-"));
     fs.chmodSync(directory, 0o700);
     const file = path.join(directory, "wireguard.conf");
     fs.writeFileSync(file, contents, { encoding: "utf8", mode: 0o600, flag: "wx" });
@@ -332,7 +354,7 @@ function removeTemporaryConfig(temporary) {
     try {
         fs.unlinkSync(temporary.file);
     } catch {
-        // Best effort cleanup; the temporary directory is root-only and /run is ephemeral.
+        // Best effort cleanup; the directory and file are accessible only to root.
     }
     try {
         fs.rmdirSync(temporary.directory);
@@ -344,6 +366,7 @@ function removeTemporaryConfig(temporary) {
 async function apply(configValue) {
     const config = validateApplyConfig(configValue);
     ensureStateDirectory();
+    ensureWireGuardConfigDirectory();
     const oldState = readState(config.interfaceName);
     const existed = await interfaceExists(config.interfaceName);
     await assertOwnership(config.interfaceName, oldState, existed);
@@ -514,6 +537,8 @@ if (require.main === module) {
 } else {
     module.exports = {
         buildWireGuardConfig,
+        createTemporaryConfig,
+        removeTemporaryConfig,
         validateApplyConfig,
         validateCidr,
         validateEndpoint,
