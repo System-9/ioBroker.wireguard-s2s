@@ -123,14 +123,6 @@
             "generationFailed": "keypair_generation_failed",
             "notAuthorized": "keypair_not_authorized"
           },
-          "confirm": {
-            "condition": "!!data.privateKey",
-            "title": "replace_key_title",
-            "text": "replace_key_text",
-            "ok": "generate",
-            "cancel": "cancel",
-            "type": "warning"
-          },
           "newLine": true,
           "xs": 12,
           "sm": 12,
