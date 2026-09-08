@@ -71,12 +71,27 @@ The easiest method is the **Generate new private and public key** button on the 
 
 Generating a replacement key invalidates the old public key. Copy the new public key to the peer configuration on the remote site.
 
-Alternatively, generate one key pair on each site's command line. Keep each private key only on its own site:
+Alternatively, create a key pair outside the adapter on each site's command line. Run these commands in a root shell with WireGuard tools installed and `/etc/wireguard` already present. Keep each private key only on its own site:
 
 ```bash
 umask 077
-wg genkey | tee privatekey | wg pubkey > publickey
-wg genpsk > presharedkey
+wg genkey > /etc/wireguard/iowg0.private
+wg pubkey < /etc/wireguard/iowg0.private > /etc/wireguard/iowg0.public
+```
+
+Display the keys for manual entry:
+
+```bash
+sudo cat /etc/wireguard/iowg0.private
+sudo cat /etc/wireguard/iowg0.public
+```
+
+Enter the contents of `/etc/wireguard/iowg0.private` in the local private key field. Enter the contents of `/etc/wireguard/iowg0.public` as the peer public key on the remote site. Running the key generation commands again overwrites the existing key pair.
+
+Optionally, create a preshared key in the same root shell:
+
+```bash
+wg genpsk > /etc/wireguard/iowg0.psk
 ```
 
 The preshared key is optional, but if used it must be identical on both sides.
@@ -158,7 +173,10 @@ The uninstaller removes the helper and sudo policy. It intentionally leaves inte
 
 ## Changelog
 
-### **WORK IN PROGRESS**
+### 0.5.0 (2026-09-08)
+
+- Document manual key generation and display commands under `/etc/wireguard`.
+- Retain the built-in private/public key generation button.
 
 - Migrate the project to the current official ioBroker Adapter Creator structure.
 - Add standard linting, type checking, package tests, integration tests and release workflow.

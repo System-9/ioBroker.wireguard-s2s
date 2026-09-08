@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "wireguard-s2s",
-    "version": "0.2.0",
+    "version": "0.5.0",
     "titleLang": {
       "en": "WireGuard Site-to-Site",
       "de": "WireGuard Site-to-Site",
@@ -29,6 +29,10 @@
       "zh-cn": "在 ioBroker Linux 主机上安全地配置和监控一条 WireGuard 站点到站点隧道。"
     },
     "news": {
+      "0.5.0": {
+        "en": "Document manual key generation and display commands; retain built-in key generation.",
+        "de": "Befehle zur manuellen Schlüsselerzeugung und Anzeige dokumentiert; integrierte Schlüsselerzeugung beibehalten."
+      },
       "0.2.0": {
         "en": "Added secure private/public key generation to the adapter configuration page.",
         "de": "Sichere Erzeugung privater und öffentlicher Schlüssel in der Adapterkonfiguration ergänzt.",

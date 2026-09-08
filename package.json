@@ -1,6 +1,6 @@
 {
   "name": "iobroker.wireguard-s2s",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "description": "Safely configure and monitor one WireGuard site-to-site tunnel on an ioBroker Linux host.",
   "author": {
     "name": "Andreas Metag",
