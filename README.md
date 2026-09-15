@@ -183,21 +183,10 @@ The uninstaller removes the helper and sudo policy. It intentionally leaves inte
 - Move JSONConfig texts to the ioBroker i18n structure.
 - Use adapter-managed timers and stop active helper processes during unload.
 
-### 0.2.0 (2026-09-02)
-
-- Add private/public WireGuard key generation to the adapter configuration.
-- Return generated keys only to ioBroker Admin instances.
-- Store the private key through ioBroker's encrypted native configuration.
-
-### 0.1.0 (2026-08-31)
-
-- Initial implementation.
-- Configure one IPv4/IPv6 WireGuard site-to-site peer.
-- Monitor interface state, handshakes and traffic counters.
-- Add a root-owned, strictly validating privileged helper.
+Older entries are available in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
 ## License
 
-MIT
+MIT – see [LICENSE](LICENSE).
 
-Copyright (c) 2026 Andreas Metag
+Copyright (c) 2026 Andreas Metag <system9.game@gmail.com>

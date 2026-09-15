@@ -31,7 +31,16 @@
     "news": {
       "0.5.0": {
         "en": "Document manual key generation and display commands; retain built-in key generation.",
-        "de": "Befehle zur manuellen Schlüsselerzeugung und Anzeige dokumentiert; integrierte Schlüsselerzeugung beibehalten."
+        "de": "Befehle zur manuellen Schlüsselerzeugung und Anzeige dokumentiert; integrierte Schlüsselerzeugung beibehalten.",
+        "ru": "Документированы команды ручного создания и отображения ключей; встроенное создание ключей сохранено.",
+        "pt": "Documentados os comandos para geração e exibição manual de chaves; mantida a geração de chaves integrada.",
+        "nl": "Opdrachten voor handmatige sleutelgeneratie en -weergave gedocumenteerd; ingebouwde sleutelgeneratie behouden.",
+        "fr": "Documentation des commandes de génération et d’affichage manuels des clés ; conservation de la génération de clés intégrée.",
+        "it": "Documentati i comandi per la generazione e la visualizzazione manuale delle chiavi; mantenuta la generazione integrata delle chiavi.",
+        "es": "Se documentaron los comandos para generar y mostrar claves manualmente; se mantuvo la generación de claves integrada.",
+        "pl": "Udokumentowano polecenia do ręcznego generowania i wyświetlania kluczy; zachowano wbudowane generowanie kluczy.",
+        "uk": "Задокументовано команди ручного створення та відображення ключів; вбудоване створення ключів збережено.",
+        "zh-cn": "记录了手动生成和显示密钥的命令，并保留了内置密钥生成功能。"
       },
       "0.2.0": {
         "en": "Added secure private/public key generation to the adapter configuration page.",
