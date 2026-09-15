@@ -173,6 +173,12 @@ The uninstaller removes the helper and sudo policy. It intentionally leaves inte
 
 ## Changelog
 
+### 0.5.1 (2026-09-15)
+
+- Resolve the remaining ioBroker repository checker findings.
+- Enable trusted npm publishing with provenance for future releases.
+- Extend CI coverage to Node.js 26.
+
 ### 0.5.0 (2026-09-08)
 
 - Document manual key generation and display commands under `/etc/wireguard`.
