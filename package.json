@@ -4,7 +4,7 @@
   "description": "Safely configure and monitor one WireGuard site-to-site tunnel on an ioBroker Linux host.",
   "author": {
     "name": "Andreas Metag",
-    "email": "System-9@users.noreply.github.com"
+    "email": "system9.game@gmail.com"
   },
   "contributors": [],
   "license": "MIT",
@@ -70,7 +70,7 @@
     "@iobroker/adapter-dev": "^1.5.0",
     "@iobroker/dev-server": "^0.8.0",
     "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/testing": "^5.3.0",
+    "@iobroker/testing": "^6.2.1",
     "@tsconfig/node22": "^22.0.2",
     "@types/iobroker": "npm:@iobroker/types@^7.2.2",
     "@types/node": "^22.18.3",
