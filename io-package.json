@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "wireguard-s2s",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "titleLang": {
       "en": "WireGuard Site-to-Site",
       "de": "WireGuard Site-to-Site",
@@ -29,6 +29,19 @@
       "zh-cn": "在 ioBroker Linux 主机上安全地配置和监控一条 WireGuard 站点到站点隧道。"
     },
     "news": {
+      "0.5.1": {
+        "en": "Resolve repository checker findings and enable trusted npm publishing.",
+        "de": "Repository-Checker-Meldungen behoben und vertrauenswürdige npm-Veröffentlichung aktiviert.",
+        "ru": "Устранены замечания проверки репозитория и включена доверенная публикация в npm.",
+        "pt": "Resolvidos os avisos do verificador do repositório e ativada a publicação confiável no npm.",
+        "nl": "Bevindingen van de repositorycontrole opgelost en vertrouwde npm-publicatie ingeschakeld.",
+        "fr": "Résolution des signalements du vérificateur de dépôt et activation de la publication npm de confiance.",
+        "it": "Risolti i problemi segnalati dal controllo del repository e abilitata la pubblicazione npm attendibile.",
+        "es": "Se resolvieron los avisos del comprobador del repositorio y se habilitó la publicación de confianza en npm.",
+        "pl": "Usunięto uwagi narzędzia sprawdzającego repozytorium i włączono zaufane publikowanie w npm.",
+        "uk": "Усунено зауваження засобу перевірки репозиторію та ввімкнено довірену публікацію в npm.",
+        "zh-cn": "解决了仓库检查器发现的问题，并启用了可信 npm 发布。"
+      },
       "0.5.0": {
         "en": "Document manual key generation and display commands; retain built-in key generation.",
         "de": "Befehle zur manuellen Schlüsselerzeugung und Anzeige dokumentiert; integrierte Schlüsselerzeugung beibehalten.",
@@ -41,32 +54,6 @@
         "pl": "Udokumentowano polecenia do ręcznego generowania i wyświetlania kluczy; zachowano wbudowane generowanie kluczy.",
         "uk": "Задокументовано команди ручного створення та відображення ключів; вбудоване створення ключів збережено.",
         "zh-cn": "记录了手动生成和显示密钥的命令，并保留了内置密钥生成功能。"
-      },
-      "0.2.0": {
-        "en": "Added secure private/public key generation to the adapter configuration page.",
-        "de": "Sichere Erzeugung privater und öffentlicher Schlüssel in der Adapterkonfiguration ergänzt.",
-        "ru": "На страницу конфигурации адаптера добавлено безопасное создание закрытого/открытого ключа.",
-        "pt": "Adicionada geração segura de chave privada/pública à página de configuração do adaptador.",
-        "nl": "Veilige generatie van privé/openbare sleutels toegevoegd aan de adapterconfiguratiepagina.",
-        "fr": "Ajout de la génération sécurisée de clés privées/publiques à la page de configuration de l'adaptateur.",
-        "it": "Aggiunta la generazione sicura di chiavi private/pubbliche alla pagina di configurazione dell'adattatore.",
-        "es": "Se agregó generación segura de claves públicas/privadas a la página de configuración del adaptador.",
-        "pl": "Do strony konfiguracji adaptera dodano generowanie bezpiecznego klucza prywatnego/publicznego.",
-        "uk": "На сторінку конфігурації адаптера додано створення безпечного приватного/відкритого ключа.",
-        "zh-cn": "在适配器配置页面中添加了安全私钥/公钥生成。"
-      },
-      "0.1.0": {
-        "en": "Initial implementation with one site-to-site peer, monitoring and a privileged helper.",
-        "de": "Erste Implementierung mit einer Site-to-Site-Gegenstelle, Monitoring und privilegiertem Helper.",
-        "ru": "Начальная реализация с одним одноранговым соединением, мониторингом и привилегированным помощником.",
-        "pt": "Implementação inicial com um peer site a site, monitoramento e um auxiliar privilegiado.",
-        "nl": "Initiële implementatie met één site-to-site peer, monitoring en een bevoorrechte helper.",
-        "fr": "Mise en œuvre initiale avec un homologue site à site, une surveillance et un assistant privilégié.",
-        "it": "Implementazione iniziale con un peer da sito a sito, monitoraggio e un aiutante privilegiato.",
-        "es": "Implementación inicial con un par de sitio a sitio, monitoreo y un ayudante privilegiado.",
-        "pl": "Wstępne wdrożenie z jednym partnerem typu site-to-site, monitorowaniem i uprzywilejowanym pomocnikiem.",
-        "uk": "Початкове впровадження з одним одноранговим вузлом, моніторингом і привілейованим помічником.",
-        "zh-cn": "最初的实施是通过一个站点到站点的对等、监控和特权帮助者进行的。"
       }
     },
     "authors": [
