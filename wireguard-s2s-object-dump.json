@@ -1,0 +1,427 @@
+{
+  "wireguard-s2s.0.control": {
+    "_id": "wireguard-s2s.0.control",
+    "type": "channel",
+    "common": {
+      "name": {
+        "en": "Control",
+        "de": "Steuerung"
+      }
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945559,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.control.apply": {
+    "_id": "wireguard-s2s.0.control.apply",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Apply configuration",
+        "de": "Konfiguration anwenden"
+      },
+      "type": "boolean",
+      "role": "button",
+      "read": false,
+      "write": true,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945561,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.control.down": {
+    "_id": "wireguard-s2s.0.control.down",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Bring interface down",
+        "de": "Schnittstelle herunterfahren"
+      },
+      "type": "boolean",
+      "role": "button",
+      "read": false,
+      "write": true,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945562,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.control.refresh": {
+    "_id": "wireguard-s2s.0.control.refresh",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Refresh status",
+        "de": "Status aktualisieren"
+      },
+      "type": "boolean",
+      "role": "button",
+      "read": false,
+      "write": true,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945563,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info": {
+    "_id": "wireguard-s2s.0.info",
+    "type": "channel",
+    "common": {
+      "name": {
+        "en": "Information",
+        "de": "Information"
+      }
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945540,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.configValid": {
+    "_id": "wireguard-s2s.0.info.configValid",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Configuration valid",
+        "de": "Konfiguration gültig"
+      },
+      "type": "boolean",
+      "role": "indicator",
+      "read": true,
+      "write": false,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945544,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.connection": {
+    "_id": "wireguard-s2s.0.info.connection",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Tunnel connected",
+        "de": "Tunnel verbunden"
+      },
+      "type": "boolean",
+      "role": "indicator.connected",
+      "read": true,
+      "write": false,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945541,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.helperReady": {
+    "_id": "wireguard-s2s.0.info.helperReady",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Privileged helper ready",
+        "de": "Privilegierter Helper bereit"
+      },
+      "type": "boolean",
+      "role": "indicator.reachable",
+      "read": true,
+      "write": false,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945543,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.interfaceName": {
+    "_id": "wireguard-s2s.0.info.interfaceName",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Interface name",
+        "de": "Schnittstellenname"
+      },
+      "type": "string",
+      "role": "info.name",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945546,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.interfaceUp": {
+    "_id": "wireguard-s2s.0.info.interfaceUp",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Interface is up",
+        "de": "Schnittstelle ist aktiv"
+      },
+      "type": "boolean",
+      "role": "indicator",
+      "read": true,
+      "write": false,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945542,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.lastError": {
+    "_id": "wireguard-s2s.0.info.lastError",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Last error",
+        "de": "Letzter Fehler"
+      },
+      "type": "string",
+      "role": "text",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945545,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.listenPort": {
+    "_id": "wireguard-s2s.0.info.listenPort",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "WireGuard listen port",
+        "de": "WireGuard-Listen-Port"
+      },
+      "type": "number",
+      "role": "info.port",
+      "read": true,
+      "write": false,
+      "def": 0
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945549,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.localNetworks": {
+    "_id": "wireguard-s2s.0.info.localNetworks",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Local LAN networks",
+        "de": "Lokale LAN-Netze"
+      },
+      "type": "string",
+      "role": "text",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945548,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.info.localPublicKey": {
+    "_id": "wireguard-s2s.0.info.localPublicKey",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Local public key",
+        "de": "Lokaler öffentlicher Schlüssel"
+      },
+      "type": "string",
+      "role": "text",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945547,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer": {
+    "_id": "wireguard-s2s.0.peer",
+    "type": "channel",
+    "common": {
+      "name": {
+        "en": "Remote peer",
+        "de": "Gegenstelle"
+      }
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945550,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.allowedIPs": {
+    "_id": "wireguard-s2s.0.peer.allowedIPs",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Allowed IP networks",
+        "de": "Erlaubte IP-Netze"
+      },
+      "type": "string",
+      "role": "text",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945554,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.connected": {
+    "_id": "wireguard-s2s.0.peer.connected",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Peer connected",
+        "de": "Gegenstelle verbunden"
+      },
+      "type": "boolean",
+      "role": "indicator.connected",
+      "read": true,
+      "write": false,
+      "def": false
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945551,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.endpoint": {
+    "_id": "wireguard-s2s.0.peer.endpoint",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Current endpoint",
+        "de": "Aktueller Endpunkt"
+      },
+      "type": "string",
+      "role": "text",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945553,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.handshakeAge": {
+    "_id": "wireguard-s2s.0.peer.handshakeAge",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Handshake age",
+        "de": "Alter des Handshakes"
+      },
+      "type": "number",
+      "role": "value.interval",
+      "unit": "sec",
+      "read": true,
+      "write": false,
+      "def": -1
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945556,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.latestHandshake": {
+    "_id": "wireguard-s2s.0.peer.latestHandshake",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Latest handshake",
+        "de": "Letzter Handshake"
+      },
+      "type": "number",
+      "role": "value.time",
+      "read": true,
+      "write": false,
+      "def": 0
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945555,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.publicKey": {
+    "_id": "wireguard-s2s.0.peer.publicKey",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Peer public key",
+        "de": "Öffentlicher Schlüssel der Gegenstelle"
+      },
+      "type": "string",
+      "role": "text",
+      "read": true,
+      "write": false,
+      "def": ""
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945552,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.rxBytes": {
+    "_id": "wireguard-s2s.0.peer.rxBytes",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Received bytes",
+        "de": "Empfangene Bytes"
+      },
+      "type": "number",
+      "role": "value",
+      "unit": "B",
+      "read": true,
+      "write": false,
+      "def": 0
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945557,
+    "user": "system.user.admin"
+  },
+  "wireguard-s2s.0.peer.txBytes": {
+    "_id": "wireguard-s2s.0.peer.txBytes",
+    "type": "state",
+    "common": {
+      "name": {
+        "en": "Transmitted bytes",
+        "de": "Gesendete Bytes"
+      },
+      "type": "number",
+      "role": "value",
+      "unit": "B",
+      "read": true,
+      "write": false,
+      "def": 0
+    },
+    "native": {},
+    "from": "system.adapter.wireguard-s2s.0",
+    "ts": 1789465945558,
+    "user": "system.user.admin"
+  }
+}
