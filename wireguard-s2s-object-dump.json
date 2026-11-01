@@ -5,7 +5,16 @@
     "common": {
       "name": {
         "en": "Control",
-        "de": "Steuerung"
+        "de": "Steuerung",
+        "ru": "Управление",
+        "pt": "Controlo",
+        "nl": "Besturing",
+        "fr": "Commande",
+        "it": "Controllo",
+        "es": "Control",
+        "pl": "Sterowanie",
+        "uk": "Керування",
+        "zh-cn": "控制"
       }
     },
     "native": {},
@@ -19,7 +28,16 @@
     "common": {
       "name": {
         "en": "Apply configuration",
-        "de": "Konfiguration anwenden"
+        "de": "Konfiguration anwenden",
+        "ru": "Применить конфигурацию",
+        "pt": "Aplicar configuração",
+        "nl": "Configuratie toepassen",
+        "fr": "Appliquer la configuration",
+        "it": "Applica configurazione",
+        "es": "Aplicar configuración",
+        "pl": "Zastosuj konfigurację",
+        "uk": "Застосувати конфігурацію",
+        "zh-cn": "应用配置"
       },
       "type": "boolean",
       "role": "button",
@@ -38,7 +56,16 @@
     "common": {
       "name": {
         "en": "Bring interface down",
-        "de": "Schnittstelle herunterfahren"
+        "de": "Schnittstelle herunterfahren",
+        "ru": "Отключить интерфейс",
+        "pt": "Desativar interface",
+        "nl": "Interface uitschakelen",
+        "fr": "Désactiver l’interface",
+        "it": "Disattiva interfaccia",
+        "es": "Desactivar interfaz",
+        "pl": "Wyłącz interfejs",
+        "uk": "Вимкнути інтерфейс",
+        "zh-cn": "关闭接口"
       },
       "type": "boolean",
       "role": "button",
@@ -57,7 +84,16 @@
     "common": {
       "name": {
         "en": "Refresh status",
-        "de": "Status aktualisieren"
+        "de": "Status aktualisieren",
+        "ru": "Обновить состояние",
+        "pt": "Atualizar estado",
+        "nl": "Status vernieuwen",
+        "fr": "Actualiser le statut",
+        "it": "Aggiorna stato",
+        "es": "Actualizar estado",
+        "pl": "Odśwież stan",
+        "uk": "Оновити стан",
+        "zh-cn": "刷新状态"
       },
       "type": "boolean",
       "role": "button",
@@ -76,7 +112,16 @@
     "common": {
       "name": {
         "en": "Information",
-        "de": "Information"
+        "de": "Information",
+        "ru": "Информация",
+        "pt": "Informações",
+        "nl": "Informatie",
+        "fr": "Informations",
+        "it": "Informazioni",
+        "es": "Información",
+        "pl": "Informacje",
+        "uk": "Інформація",
+        "zh-cn": "信息"
       }
     },
     "native": {},
@@ -90,7 +135,16 @@
     "common": {
       "name": {
         "en": "Configuration valid",
-        "de": "Konfiguration gültig"
+        "de": "Konfiguration gültig",
+        "ru": "Конфигурация действительна",
+        "pt": "Configuração válida",
+        "nl": "Configuratie geldig",
+        "fr": "Configuration valide",
+        "it": "Configurazione valida",
+        "es": "Configuración válida",
+        "pl": "Konfiguracja prawidłowa",
+        "uk": "Конфігурація дійсна",
+        "zh-cn": "配置有效"
       },
       "type": "boolean",
       "role": "indicator",
@@ -109,7 +163,16 @@
     "common": {
       "name": {
         "en": "Tunnel connected",
-        "de": "Tunnel verbunden"
+        "de": "Tunnel verbunden",
+        "ru": "Туннель подключён",
+        "pt": "Túnel conectado",
+        "nl": "Tunnel verbonden",
+        "fr": "Tunnel connecté",
+        "it": "Tunnel connesso",
+        "es": "Túnel conectado",
+        "pl": "Tunel połączony",
+        "uk": "Тунель підключено",
+        "zh-cn": "隧道已连接"
       },
       "type": "boolean",
       "role": "indicator.connected",
@@ -128,7 +191,16 @@
     "common": {
       "name": {
         "en": "Privileged helper ready",
-        "de": "Privilegierter Helper bereit"
+        "de": "Privilegierter Helper bereit",
+        "ru": "Привилегированный помощник готов",
+        "pt": "Auxiliar privilegiado pronto",
+        "nl": "Helper met verhoogde rechten gereed",
+        "fr": "Assistant privilégié prêt",
+        "it": "Helper con privilegi pronto",
+        "es": "Asistente con privilegios listo",
+        "pl": "Pomocnik z uprawnieniami gotowy",
+        "uk": "Привілейований помічник готовий",
+        "zh-cn": "特权辅助程序已就绪"
       },
       "type": "boolean",
       "role": "indicator.reachable",
@@ -147,7 +219,16 @@
     "common": {
       "name": {
         "en": "Interface name",
-        "de": "Schnittstellenname"
+        "de": "Schnittstellenname",
+        "ru": "Имя интерфейса",
+        "pt": "Nome da interface",
+        "nl": "Interfacenaam",
+        "fr": "Nom de l’interface",
+        "it": "Nome interfaccia",
+        "es": "Nombre de la interfaz",
+        "pl": "Nazwa interfejsu",
+        "uk": "Назва інтерфейсу",
+        "zh-cn": "接口名称"
       },
       "type": "string",
       "role": "info.name",
@@ -166,7 +247,16 @@
     "common": {
       "name": {
         "en": "Interface is up",
-        "de": "Schnittstelle ist aktiv"
+        "de": "Schnittstelle ist aktiv",
+        "ru": "Интерфейс активен",
+        "pt": "Interface ativa",
+        "nl": "Interface actief",
+        "fr": "Interface active",
+        "it": "Interfaccia attiva",
+        "es": "Interfaz activa",
+        "pl": "Interfejs aktywny",
+        "uk": "Інтерфейс активний",
+        "zh-cn": "接口已启用"
       },
       "type": "boolean",
       "role": "indicator",
@@ -185,7 +275,16 @@
     "common": {
       "name": {
         "en": "Last error",
-        "de": "Letzter Fehler"
+        "de": "Letzter Fehler",
+        "ru": "Последняя ошибка",
+        "pt": "Último erro",
+        "nl": "Laatste fout",
+        "fr": "Dernière erreur",
+        "it": "Ultimo errore",
+        "es": "Último error",
+        "pl": "Ostatni błąd",
+        "uk": "Остання помилка",
+        "zh-cn": "最近的错误"
       },
       "type": "string",
       "role": "text",
@@ -204,7 +303,16 @@
     "common": {
       "name": {
         "en": "WireGuard listen port",
-        "de": "WireGuard-Listen-Port"
+        "de": "WireGuard-Listen-Port",
+        "ru": "Порт прослушивания WireGuard",
+        "pt": "Porta de escuta do WireGuard",
+        "nl": "WireGuard-luisterpoort",
+        "fr": "Port d’écoute WireGuard",
+        "it": "Porta di ascolto WireGuard",
+        "es": "Puerto de escucha de WireGuard",
+        "pl": "Port nasłuchiwania WireGuard",
+        "uk": "Порт прослуховування WireGuard",
+        "zh-cn": "WireGuard 监听端口"
       },
       "type": "number",
       "role": "info.port",
@@ -223,7 +331,16 @@
     "common": {
       "name": {
         "en": "Local LAN networks",
-        "de": "Lokale LAN-Netze"
+        "de": "Lokale LAN-Netze",
+        "ru": "Локальные сети LAN",
+        "pt": "Redes LAN locais",
+        "nl": "Lokale LAN-netwerken",
+        "fr": "Réseaux LAN locaux",
+        "it": "Reti LAN locali",
+        "es": "Redes LAN locales",
+        "pl": "Lokalne sieci LAN",
+        "uk": "Локальні мережі LAN",
+        "zh-cn": "本地 LAN 网络"
       },
       "type": "string",
       "role": "text",
@@ -242,7 +359,16 @@
     "common": {
       "name": {
         "en": "Local public key",
-        "de": "Lokaler öffentlicher Schlüssel"
+        "de": "Lokaler öffentlicher Schlüssel",
+        "ru": "Локальный открытый ключ",
+        "pt": "Chave pública local",
+        "nl": "Lokale openbare sleutel",
+        "fr": "Clé publique locale",
+        "it": "Chiave pubblica locale",
+        "es": "Clave pública local",
+        "pl": "Lokalny klucz publiczny",
+        "uk": "Локальний публічний ключ",
+        "zh-cn": "本地公钥"
       },
       "type": "string",
       "role": "text",
@@ -261,7 +387,16 @@
     "common": {
       "name": {
         "en": "Remote peer",
-        "de": "Gegenstelle"
+        "de": "Gegenstelle",
+        "ru": "Удалённый узел",
+        "pt": "Par remoto",
+        "nl": "Externe peer",
+        "fr": "Pair distant",
+        "it": "Peer remoto",
+        "es": "Par remoto",
+        "pl": "Zdalny partner",
+        "uk": "Віддалений вузол",
+        "zh-cn": "远程对等端"
       }
     },
     "native": {},
@@ -275,7 +410,16 @@
     "common": {
       "name": {
         "en": "Allowed IP networks",
-        "de": "Erlaubte IP-Netze"
+        "de": "Erlaubte IP-Netze",
+        "ru": "Разрешённые IP-сети",
+        "pt": "Redes IP permitidas",
+        "nl": "Toegestane IP-netwerken",
+        "fr": "Réseaux IP autorisés",
+        "it": "Reti IP consentite",
+        "es": "Redes IP permitidas",
+        "pl": "Dozwolone sieci IP",
+        "uk": "Дозволені IP-мережі",
+        "zh-cn": "允许的 IP 网络"
       },
       "type": "string",
       "role": "text",
@@ -294,7 +438,16 @@
     "common": {
       "name": {
         "en": "Peer connected",
-        "de": "Gegenstelle verbunden"
+        "de": "Gegenstelle verbunden",
+        "ru": "Удалённый узел подключён",
+        "pt": "Par conectado",
+        "nl": "Peer verbonden",
+        "fr": "Pair connecté",
+        "it": "Peer connesso",
+        "es": "Par conectado",
+        "pl": "Partner połączony",
+        "uk": "Віддалений вузол підключено",
+        "zh-cn": "对等端已连接"
       },
       "type": "boolean",
       "role": "indicator.connected",
@@ -313,7 +466,16 @@
     "common": {
       "name": {
         "en": "Current endpoint",
-        "de": "Aktueller Endpunkt"
+        "de": "Aktueller Endpunkt",
+        "ru": "Текущая конечная точка",
+        "pt": "Ponto de extremidade atual",
+        "nl": "Huidig eindpunt",
+        "fr": "Point de terminaison actuel",
+        "it": "Endpoint corrente",
+        "es": "Punto de conexión actual",
+        "pl": "Bieżący punkt końcowy",
+        "uk": "Поточна кінцева точка",
+        "zh-cn": "当前端点"
       },
       "type": "string",
       "role": "text",
@@ -332,7 +494,16 @@
     "common": {
       "name": {
         "en": "Handshake age",
-        "de": "Alter des Handshakes"
+        "de": "Alter des Handshakes",
+        "ru": "Время с последнего рукопожатия",
+        "pt": "Tempo desde a última troca de chaves",
+        "nl": "Tijd sinds laatste handshake",
+        "fr": "Temps depuis la dernière négociation",
+        "it": "Tempo dall’ultimo handshake",
+        "es": "Tiempo desde el último intercambio de claves",
+        "pl": "Czas od ostatniego uzgodnienia połączenia",
+        "uk": "Час від останнього рукостискання",
+        "zh-cn": "距上次握手的时间"
       },
       "type": "number",
       "role": "value.interval",
@@ -352,7 +523,16 @@
     "common": {
       "name": {
         "en": "Latest handshake",
-        "de": "Letzter Handshake"
+        "de": "Letzter Handshake",
+        "ru": "Последнее рукопожатие",
+        "pt": "Última troca de chaves",
+        "nl": "Laatste handshake",
+        "fr": "Dernière négociation",
+        "it": "Ultimo handshake",
+        "es": "Último intercambio de claves",
+        "pl": "Ostatnie uzgodnienie połączenia",
+        "uk": "Останнє рукостискання",
+        "zh-cn": "最近一次握手"
       },
       "type": "number",
       "role": "value.time",
@@ -371,7 +551,16 @@
     "common": {
       "name": {
         "en": "Peer public key",
-        "de": "Öffentlicher Schlüssel der Gegenstelle"
+        "de": "Öffentlicher Schlüssel der Gegenstelle",
+        "ru": "Открытый ключ удалённого узла",
+        "pt": "Chave pública do par",
+        "nl": "Openbare sleutel van peer",
+        "fr": "Clé publique du pair",
+        "it": "Chiave pubblica del peer",
+        "es": "Clave pública del par",
+        "pl": "Klucz publiczny partnera",
+        "uk": "Публічний ключ віддаленого вузла",
+        "zh-cn": "对等端公钥"
       },
       "type": "string",
       "role": "text",
@@ -390,7 +579,16 @@
     "common": {
       "name": {
         "en": "Received bytes",
-        "de": "Empfangene Bytes"
+        "de": "Empfangene Bytes",
+        "ru": "Получено байт",
+        "pt": "Bytes recebidos",
+        "nl": "Ontvangen bytes",
+        "fr": "Octets reçus",
+        "it": "Byte ricevuti",
+        "es": "Bytes recibidos",
+        "pl": "Odebrane bajty",
+        "uk": "Отримано байтів",
+        "zh-cn": "接收字节数"
       },
       "type": "number",
       "role": "value",
@@ -410,7 +608,16 @@
     "common": {
       "name": {
         "en": "Transmitted bytes",
-        "de": "Gesendete Bytes"
+        "de": "Gesendete Bytes",
+        "ru": "Передано байт",
+        "pt": "Bytes transmitidos",
+        "nl": "Verzonden bytes",
+        "fr": "Octets transmis",
+        "it": "Byte trasmessi",
+        "es": "Bytes transmitidos",
+        "pl": "Wysłane bajty",
+        "uk": "Передано байтів",
+        "zh-cn": "发送字节数"
       },
       "type": "number",
       "role": "value",
