@@ -1,12 +1,10 @@
 {
   "auto_apply": "Appliquer la configuration au démarrage de l'adaptateur",
-  "cancel": "Annuler",
   "enable_ipv4_forwarding": "Activer le transfert IPv4 au moment de l'exécution",
   "enable_ipv6_forwarding": "Activer le transfert IPv6 au moment de l'exécution",
   "endpoint_host": "Hôte du point de terminaison (facultatif pour le répondeur)",
   "endpoint_host_help": "Nom DNS, adresse IPv4 ou IPv6 sans parenthèses.",
   "endpoint_port": "Port du point de terminaison",
-  "generate": "Générer",
   "generate_keypair": "Générer une nouvelle clé privée et publique",
   "handshake_timeout": "Délai d'expiration de la connexion (secondes)",
   "interface_name": "Nom de l'interface",
@@ -31,8 +29,6 @@
   "private_key": "Clé privée locale",
   "remote_networks": "Tunnels distants et réseaux LAN (AllowedIPs)",
   "remote_networks_help": "Des itinéraires sont créés pour chaque entrée. Les itinéraires par défaut sont rejetés.",
-  "replace_key_text": "La génération d'une nouvelle clé rend la clé publique précédente invalide. Le site distant doit être mis à jour.",
-  "replace_key_title": "Remplacer la clé existante ?",
   "tab_operation": "Opération",
   "tab_peer": "Homologue distant",
   "tab_tunnel": "Tunnel"

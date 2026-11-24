@@ -141,25 +141,12 @@ The ioBroker process does not run arbitrary root commands. It sends a small JSON
 - invokes fixed `ip`, `wg` and `sysctl` binaries without a shell;
 - rejects newlines, malformed keys/CIDRs, oversized requests and default routes;
 - refuses interfaces without a root-owned ownership marker;
-- writes temporary WireGuard configuration with mode `0600` under `/run` and deletes it immediately;
+- writes temporary WireGuard configuration with mode `0600` in a private directory under `/etc/wireguard` and removes it after the operation;
 - never returns or persists the private key in its status/state file.
 
 The root-owned state directory is `/var/lib/iobroker-wireguard-s2s`. `control.down` removes the managed interface and its ownership marker. Stopping the adapter alone leaves the interface running; this avoids interrupting network connectivity during an ioBroker restart.
 
-## Development
-
-```bash
-npm run check
-npm run lint
-npm run test
-npm run test:integration
-npm run coverage
-node --check helper/iobroker-wireguard-s2s-helper.js
-```
-
-The project structure is generated from the official `@iobroker/create-adapter` TypeScript/JSONConfig template. Unit tests cover configuration normalization, endpoint formatting, keys and the rejection of command-style interface names and default routes. The integration test starts the adapter in the standard ioBroker test harness. End-to-end WireGuard network tests still require a disposable Linux network namespace or virtual machine and root permissions.
-
-Use `npm run release` to prepare releases after npm trusted publishing and the deploy job in `.github/workflows/test-and-release.yml` have been configured.
+Contributor information is available in [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## Uninstall the helper
 

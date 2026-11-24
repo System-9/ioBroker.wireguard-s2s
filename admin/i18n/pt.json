@@ -1,12 +1,10 @@
 {
   "auto_apply": "Aplicar configuração quando o adaptador for iniciado",
-  "cancel": "Cancelar",
   "enable_ipv4_forwarding": "Habilite o encaminhamento IPv4 em tempo de execução",
   "enable_ipv6_forwarding": "Habilite o encaminhamento IPv6 em tempo de execução",
   "endpoint_host": "Host de endpoint (opcional para respondedor)",
   "endpoint_host_help": "Nome DNS, endereço IPv4 ou IPv6 sem colchetes.",
   "endpoint_port": "Porta do terminal",
-  "generate": "Gerar",
   "generate_keypair": "Gere nova chave privada e pública",
   "handshake_timeout": "Tempo limite conectado (segundos)",
   "interface_name": "Nome da interface",
@@ -31,8 +29,6 @@
   "private_key": "Chave privada local",
   "remote_networks": "Túneis remotos e redes LAN (AllowedIPs)",
   "remote_networks_help": "Rotas são criadas para cada entrada. As rotas padrão são rejeitadas.",
-  "replace_key_text": "A geração de uma nova chave torna a chave pública anterior inválida. O site remoto deve ser atualizado.",
-  "replace_key_title": "Substituir a chave existente?",
   "tab_operation": "Operação",
   "tab_peer": "Par remoto",
   "tab_tunnel": "Túnel"

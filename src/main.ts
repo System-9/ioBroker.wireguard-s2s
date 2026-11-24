@@ -7,7 +7,7 @@ import type { HelperStatus } from "./lib/types";
 
 class WireguardS2S extends utils.Adapter {
     private readonly helper: HelperClient;
-    private pollTimer?: ioBroker.Interval;
+    private pollTimer?: ioBroker.Timeout;
     private validated?: ValidatedConfig;
     private operationChain: Promise<void> = Promise.resolve();
     private lastReportedError = "";
@@ -22,7 +22,9 @@ class WireguardS2S extends utils.Adapter {
             scheduleTimeout: (callback, timeout) => this.setTimeout(callback, timeout),
             cancelTimeout: timeout => this.clearTimeout(timeout),
         });
-        this.on("ready", this.onReady.bind(this));
+        this.on("ready", () => {
+            void this.onReady().catch(error => this.logAsyncError("Adapter startup failed", error));
+        });
         this.on("message", this.onMessage.bind(this));
         this.on("stateChange", this.onStateChange.bind(this));
         this.on("unload", this.onUnload.bind(this));
@@ -42,7 +44,7 @@ class WireguardS2S extends utils.Adapter {
         } catch (error) {
             await this.reportError(this.errorMessage(error));
             this.log.error(
-                `WireGuard helper is unavailable. Install it with 'npm run helper:install'. ${this.errorMessage(error)}`,
+                `WireGuard helper is unavailable. Follow the helper installation instructions in README.md. ${this.errorMessage(error)}`,
             );
             return;
         }
@@ -76,7 +78,7 @@ class WireguardS2S extends utils.Adapter {
     private onUnload(callback: () => void): void {
         this.shuttingDown = true;
         if (this.pollTimer) {
-            this.clearInterval(this.pollTimer);
+            this.clearTimeout(this.pollTimer);
             this.pollTimer = undefined;
         }
         this.helper.close();
@@ -131,7 +133,11 @@ class WireguardS2S extends utils.Adapter {
         }
 
         this.operationChain = this.operationChain
-            .then(action, action)
+            .then(() => {
+                if (!this.shuttingDown) {
+                    return action();
+                }
+            })
             .catch(async error => {
                 const message = this.errorMessage(error);
                 if (this.shuttingDown) {
@@ -144,14 +150,22 @@ class WireguardS2S extends utils.Adapter {
                 if (!this.shuttingDown) {
                     return this.setStateAsync(localId, false, true).then(() => undefined);
                 }
-            });
+            })
+            .catch(error => this.logAsyncError("Could not finish WireGuard control action", error));
     }
 
     private startPolling(): void {
-        if (!this.validated) {
+        if (this.shuttingDown || !this.validated || this.pollTimer) {
             return;
         }
-        this.pollTimer = this.setInterval(() => void this.refreshStatus(false), this.validated.pollInterval * 1_000);
+        this.pollTimer = this.setTimeout(() => {
+            this.pollTimer = undefined;
+            // Share the control queue so status reads cannot race apply/down operations.
+            this.operationChain = this.operationChain
+                .then(() => this.refreshStatus(false))
+                .catch(error => this.logAsyncError("Could not refresh WireGuard status", error))
+                .then(() => this.startPolling());
+        }, this.validated.pollInterval * 1_000);
     }
 
     private async applyConfiguration(): Promise<void> {
@@ -232,6 +246,12 @@ class WireguardS2S extends utils.Adapter {
 
     private errorMessage(error: unknown): string {
         return error instanceof Error ? error.message : String(error);
+    }
+
+    private logAsyncError(context: string, error: unknown): void {
+        if (!this.shuttingDown) {
+            this.log.error(`${context}: ${this.errorMessage(error)}`);
+        }
     }
 }
 
