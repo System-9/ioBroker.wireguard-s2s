@@ -1,12 +1,10 @@
 {
   "auto_apply": "Zastosuj konfigurację po uruchomieniu adaptera",
-  "cancel": "Anulować",
   "enable_ipv4_forwarding": "Włącz przekazywanie IPv4 w czasie wykonywania",
   "enable_ipv6_forwarding": "Włącz przekazywanie IPv6 w czasie wykonywania",
   "endpoint_host": "Host punktu końcowego (opcjonalnie dla obiektu odpowiadającego)",
   "endpoint_host_help": "Nazwa DNS, adres IPv4 lub IPv6 bez nawiasów.",
   "endpoint_port": "Port punktu końcowego",
-  "generate": "Spowodować",
   "generate_keypair": "Wygeneruj nowy klucz prywatny i publiczny",
   "handshake_timeout": "Limit czasu połączenia (sekundy)",
   "interface_name": "Nazwa interfejsu",
@@ -31,8 +29,6 @@
   "private_key": "Lokalny klucz prywatny",
   "remote_networks": "Zdalny tunel i sieci LAN (AllowedIPs)",
   "remote_networks_help": "Dla każdego wpisu tworzone są trasy. Trasy domyślne są odrzucane.",
-  "replace_key_text": "Wygenerowanie nowego klucza powoduje unieważnienie poprzedniego klucza publicznego. Zdalna witryna musi zostać zaktualizowana.",
-  "replace_key_title": "Zamienić istniejący klucz?",
   "tab_operation": "Działanie",
   "tab_peer": "Zdalny partner",
   "tab_tunnel": "Tunel"

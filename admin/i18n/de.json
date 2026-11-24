@@ -1,12 +1,10 @@
 {
   "auto_apply": "Konfiguration beim Adapterstart anwenden",
-  "cancel": "Abbrechen",
   "enable_ipv4_forwarding": "IPv4-Forwarding zur Laufzeit aktivieren",
   "enable_ipv6_forwarding": "IPv6-Forwarding zur Laufzeit aktivieren",
   "endpoint_host": "Endpunkt-Host (für Responder optional)",
   "endpoint_host_help": "DNS-Name, IPv4- oder IPv6-Adresse ohne Klammern.",
   "endpoint_port": "Endpunkt-Port",
-  "generate": "Erzeugen",
   "generate_keypair": "Neuen privaten und öffentlichen Schlüssel erzeugen",
   "handshake_timeout": "Verbunden-Timeout (Sekunden)",
   "interface_name": "Schnittstellenname",
@@ -31,8 +29,6 @@
   "private_key": "Lokaler privater Schlüssel",
   "remote_networks": "Entfernte Tunnel- und LAN-Netze (AllowedIPs)",
   "remote_networks_help": "Für jeden Eintrag wird eine Route angelegt. Default-Routen werden abgewiesen.",
-  "replace_key_text": "Ein neuer Schlüssel macht den bisherigen öffentlichen Schlüssel ungültig. Die Gegenstelle muss aktualisiert werden.",
-  "replace_key_title": "Vorhandenen Schlüssel ersetzen?",
   "tab_operation": "Betrieb",
   "tab_peer": "Gegenstelle",
   "tab_tunnel": "Tunnel"

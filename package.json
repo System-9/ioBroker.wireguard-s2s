@@ -36,6 +36,7 @@
     "scripts/",
     "io-package.json",
     "LICENSE",
+    "DEVELOPMENT.md",
     "README.md"
   ],
   "scripts": {
@@ -46,7 +47,7 @@
     "build:ts": "build-adapter ts --typescriptFormat cjs --typescriptCompileTarget node22",
     "watch:ts": "build-adapter ts --typescriptFormat cjs --typescriptCompileTarget node22 --watch",
     "test:ts": "mocha --config test/mocharc.custom.json src/**/*.test.ts",
-    "test:helper": "node --test test/helper.test.js",
+    "test:helper": "node --test test/helper.test.js test/lifecycle.test.js",
     "test:package": "mocha test/package --exit",
     "test:integration": "mocha test/integration --exit",
     "test": "npm run test:ts && npm run test:helper && npm run test:package",

@@ -1,12 +1,10 @@
 {
   "auto_apply": "Pas de configuratie toe wanneer de adapter start",
-  "cancel": "Annuleren",
   "enable_ipv4_forwarding": "Schakel IPv4-doorsturen tijdens runtime in",
   "enable_ipv6_forwarding": "Schakel IPv6-doorsturen tijdens runtime in",
   "endpoint_host": "Eindpunthost (optioneel voor responder)",
   "endpoint_host_help": "DNS-naam, IPv4- of IPv6-adres zonder haakjes.",
   "endpoint_port": "Eindpunt poort",
-  "generate": "Genereer",
   "generate_keypair": "Genereer een nieuwe privé- en openbare sleutel",
   "handshake_timeout": "Verbonden time-out (seconden)",
   "interface_name": "Interfacenaam",
@@ -31,9 +29,7 @@
   "private_key": "Lokale privésleutel",
   "remote_networks": "Externe tunnel- en LAN-netwerken (AllowedIPs)",
   "remote_networks_help": "Voor elke invoer worden routes gemaakt. Standaardroutes worden afgewezen.",
-  "replace_key_text": "Als u een nieuwe sleutel genereert, wordt de vorige openbare sleutel ongeldig. De externe site moet worden bijgewerkt.",
-  "replace_key_title": "Bestaande sleutel vervangen?",
   "tab_operation": "Operatie",
-  "tab_peer": "Collega op afstand",
+  "tab_peer": "Externe peer",
   "tab_tunnel": "Tunnel"
 }

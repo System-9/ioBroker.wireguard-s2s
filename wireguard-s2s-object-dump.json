@@ -315,7 +315,7 @@
         "zh-cn": "WireGuard 监听端口"
       },
       "type": "number",
-      "role": "info.port",
+      "role": "value",
       "read": true,
       "write": false,
       "def": 0
@@ -450,7 +450,7 @@
         "zh-cn": "对等端已连接"
       },
       "type": "boolean",
-      "role": "indicator.connected",
+      "role": "indicator.reachable",
       "read": true,
       "write": false,
       "def": false
@@ -507,7 +507,7 @@
       },
       "type": "number",
       "role": "value.interval",
-      "unit": "sec",
+      "unit": "s",
       "read": true,
       "write": false,
       "def": -1
